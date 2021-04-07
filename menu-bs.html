@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="d-flex justify-content-center m-4">
+            <h1>Menu - Faça o seu pedido!</h1>
+        </div>
+
+          <div class="card m-4 p-3">
+                <div class="d-flex justify-content-center m-1">
+                    <h2>Dados Pessoais</h2>
+                </div>
+                <label for="nome">Nome:</label> <input type="text" class="form-control" id="nome"><br>
+                <label for="telefone">Telefone:</label> <input type="text" class="form-control" id="telefone"><br>
+                <label for="email">Email:</label> <input type="email" class="form-control" id="email">
+            </div>
+            <div class="card m-4 p-3">
+                <div class="d-flex justify-content-center m-1">
+                    <h2>Empresas Conveniadas</h2>
+                </div>
+                <select class="form-select" aria-label="Default select example">
+                    <option value="0">Nenhuma</option>
+                    <option value="10">Salgados Brasil</option>
+                    <option value="20">Lanchonete Zenilda</option>
+                    <option value="30">Restaurante Jonva</option>
+                  </select>
+            </div>
+
+            <div class="card m-4 p-3">
+                <div class="d-flex justify-content-center m-1">
+                    <h2>Prato Principal</h2>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-check pe-3">
+                        <input type="radio" class="form-check-input" id="pp1" name="prato_principal" value="0" checked>
+                        <label class="form-check-label" for="pp1">Bife Acebolado</label>
+                    </div>
+                    <div class="form-check pe-3">
+                        <input type="radio" class="form-check-input" id="pp2" name="prato_principal" value="1">
+                        <label class="form-check-label" for="pp2">Peito de Frango Grelhado</label>
+                    </div>
+                    <div class="form-check pe-3">
+                        <input type="radio" class="form-check-input" id="pp3" name="prato_principal" value="2">
+                        <label class="form-check-label" for="pp3">Carne de Panela</label>
+                    </div>
+                </div>
+            </div>
+            <div class="card p-3 m-4">
+                <div class="d-flex justify-content-center m-1">
+                    <h2>Acompanhamentos</h2>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <div class="form-check pe-3">
+                        <input type="checkbox" id="acp1" class="form-check-input" name="acompanhamento" value="0">
+                        <label for="acp1" class="form-check-label">Mini Salada</label>
+                    </div>
+
+                    <div class="form-check pe-3">
+                        <input type="checkbox" id="acp2" class="form-check-input" name="acompanhamento" value="1">
+                        <label for="acp2" class="form-check-label">Maionese</label>
+                    </div>
+
+                    <div class="form-check pe-3">
+                        <input type="checkbox" id="acp3" class="form-check-input" name="acompanhamento" value="2">
+                        <label for="ac3" class="form-check-label">Farofa</label>
+                    </div>
+
+                    <div class="form-check pe-3">
+                        <input type="checkbox" id="acp4" class="form-check-input" name="acompanhamento" value="3">
+                        <label for="ac4" class="form-check-label">Torresmo</label>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="m-4">
+                <div class="d-grid gap-2 ">
+                    <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="calc();">Fechar Pedido</button>
+                </div>
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Deseja finalizar o pedido?</h5>
+                          
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="m-4" id="saida">
+
+                            </div>
+                          
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Não</button>
+                          <button type="button" class="btn btn-primary">Sim</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+        <script src="calc.js"></script>
+</body>
+
+</html>
